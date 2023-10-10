@@ -1,0 +1,46 @@
+-- this creates tables
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    email VARCHAR(255),
+    phone_number VARCHAR(15)
+);
+
+CREATE TABLE accounts (
+    account_id INT AUTO_INCREMENT PRIMARY KEY,
+    account_number VARCHAR(15),
+    customer_id INT,
+    balance DECIMAL(10, 2),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+CREATE TABLE transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    account_id INT,
+    transaction_date DATE,
+    transaction_type ENUM('Deposit', 'Withdrawal', 'Transfer'),
+    amount DECIMAL(10, 2),
+    FOREIGN KEY (account_id) REFERENCES accounts(account_id)
+);
+
+-- Insert sample data into customers
+INSERT INTO customers (first_name, last_name, email, phone_number) VALUES
+    ('Ansh', 'Patel', 'ansh@gmail.com', '905-123-4567'),
+    ('Raj', 'Patel', 'raju@gmail.com', '875-987-5784'),
+    ('Darshan', 'Prajapti', 'DMprajaoti@outlook.com', '698-456-7890'),
+    -- here I can add  more customer data ...
+
+-- Insert sample data into accounts
+INSERT INTO accounts (account_number, customer_id, balance) VALUES
+    ('4528248552', 1, 5000.00),
+    ('2658554852', 2, 7500.00),
+    ('3658557555', 3, 10000.00),
+    -- Can add more account data here...
+
+-- Insert sample data into transactions it includes date and type of transation
+INSERT INTO transactions (account_id, transaction_date, transaction_type, amount) VALUES
+    (1, '2023-10-09', 'Deposit', 1000.00),
+    (2, '2023-10-05', 'Deposit', 1500.00),
+    (3, '2023-10-07', 'Withdrawal', 500.00),
+    -- Add more transaction data here...
