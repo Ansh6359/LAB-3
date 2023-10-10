@@ -29,6 +29,15 @@ INSERT INTO customers (first_name, last_name, email, phone_number) VALUES
     ('Ansh', 'Patel', 'ansh@gmail.com', '905-123-4567'),
     ('Raj', 'Patel', 'raju@gmail.com', '875-987-5784'),
     ('Darshan', 'Prajapti', 'DMprajaoti@outlook.com', '698-456-7890'),
+    ('NIMISHA', 'PATEL', 'nimisha@gmail.com', '123-456-7890'),
+    ('NEHA', 'JETVANI', 'neha@gmail.com', '987-654-3210'),
+    ('DIYA', 'PATEL', 'diya@gmail.com', '456-789-1230'),
+    ('JANVI', 'MEHTA', 'janvi@gmail.com', '789-123-4560'),
+    ('KHUSHI', 'PATEL', 'khushi@gmail.com', '654-321-9870'),
+    ('RUPALI', 'JANI', 'rupali@gmail.com', '123-456-7890'),
+    ('NILU', 'PATEL', 'nilu@gmail.com', '987-654-3210'),
+    ('HINA', 'PATEL', 'hina@gmail.com', '456-789-1230'),
+    ('JEEL', 'PATEL', 'jeel@gmail.com', '789-123-4560'),
     -- here I can add  more customer data ...
 
 -- Insert sample data into accounts
@@ -36,6 +45,15 @@ INSERT INTO accounts (account_number, customer_id, balance) VALUES
     ('4528248552', 1, 5000.00),
     ('2658554852', 2, 7500.00),
     ('3658557555', 3, 10000.00),
+    ('852963741', 4, 6000.00),
+    ('741258963', 5, 8500.00),
+    ('369852147', 6, 12000.00),
+    ('159753468', 7, 4000.00),
+    ('987654321', 8, 7000.00),
+    ('123456789', 9, 9500.00),
+    ('456789123', 10, 8000.00),
+    ('789123456', 11, 6000.00),
+    ('654321987', 12, 8500.00),
     -- Can add more account data here...
 
 -- Insert sample data into transactions it includes date and type of transation
@@ -43,4 +61,13 @@ INSERT INTO transactions (account_id, transaction_date, transaction_type, amount
     (1, '2023-10-09', 'Deposit', 1000.00),
     (2, '2023-10-05', 'Deposit', 1500.00),
     (3, '2023-10-07', 'Withdrawal', 500.00),
+    (4, '2023-10-10', 'Deposit', 2000.00),
+    (5, '2023-10-06', 'Withdrawal', 1000.00),
+    (6, '2023-10-08', 'Deposit', 3000.00),
+    (7, '2023-10-09', 'Withdrawal', 800.00),
+    (8, '2023-10-10', 'Deposit', 3000.00),
+    (9, '2023-10-06', 'Withdrawal', 1200.00),
+    (10,'2023-10-08', 'Deposit', 2500.00),
+    (11,'2023-10-09', 'Withdrawal', 700.00),
+    (12,'2023-10-07', 'Deposit', 1800.00),
     -- Add more transaction data here...
